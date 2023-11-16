@@ -1,0 +1,6 @@
+res://default_env.tres
+res://scene/Enemy.tscn
+res://scripts/RichTextLabel.gd
+res://scene/MainScene.tscn
+res://scene/HP.tscn
+res://scene/EnemyPool.gd

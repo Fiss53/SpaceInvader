@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvvn5ucspw8kw"]
+
+[ext_resource type="Script" path="res://scene/lives.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://denvfdkx44348" path="res://assets/hearts-expor300_500t-export.png" id="3_pdbrx"]
+
+[node name="HP" type="Node2D"]
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1032, 25)
+scale = Vector2(0.167466, 0.168889)
+texture = ExtResource("3_pdbrx")
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(1074, 25)
+scale = Vector2(0.167466, 0.168889)
+texture = ExtResource("3_pdbrx")
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+position = Vector2(1115, 25)
+scale = Vector2(0.167466, 0.168889)
+texture = ExtResource("3_pdbrx")
