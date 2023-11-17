@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://beqa8ebru37oo"]
 
 [ext_resource type="Script" path="res://scene/Enemy.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://1a38cr0utdqr" path="res://assets/Laser Sprites/11.png" id="2_wqi2a"]
+[ext_resource type="Texture2D" uid="uid://o1hrbihd0r0b" path="res://assets/laser400.png" id="2_yl0o2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(164.005, 41.9995)
+size = Vector2(106, 35.0162)
 
 [node name="sceneEnemy" type="Node2D"]
 position = Vector2(365, 198)
@@ -12,14 +12,14 @@ rotation = -1.58486
 script = ExtResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 3.14159
-texture = ExtResource("2_wqi2a")
+rotation = 1.5708
+texture = ExtResource("2_yl0o2")
 
 [node name="EnemyHitBox" type="Area2D" parent="."]
 rotation = 0.013822
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
-position = Vector2(8.00024, -0.998047)
+position = Vector2(-6.99614, 2.49362)
 shape = SubResource("1")
 
 [connection signal="area_entered" from="EnemyHitBox" to="." method="_on_Area2D_area_entered"]
