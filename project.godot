@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SpaceInvaders"
-run/main_scene="res://scene/MainScene.tscn"
+run/main_scene="res://scene/menu.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://assets/icon.png"
 

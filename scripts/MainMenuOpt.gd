@@ -12,4 +12,13 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	change_scene_ load("scene/MainScene.tscn")
+	get_tree().change_scene_to_file("res://scene/MainScene.tscn")
+
+
+
+func _on_quit_pressed():
+	get_tree().quit()
+
+
+func _on_settings_pressed():
+	pass # Replace with function body.
