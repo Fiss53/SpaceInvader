@@ -19,12 +19,4 @@ func get_input():
 func _process(delta):
 	get_input()
 	move_and_slide()
-	
-	
 
-func collision(area):
-	if Hp.lives == 0:
-		queue_free()
-	if area.name == "EnemyHitBox":
-		Hp.lives -= 1
-	

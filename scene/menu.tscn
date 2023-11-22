@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhsbthvw13blj"]
+
+[ext_resource type="Texture2D" uid="uid://vpvumsp5bjgj" path="res://assets/6AiWJgLP-wallha.com.png" id="1_en5of"]
+[ext_resource type="FontFile" uid="uid://bdled44q30bpf" path="res://fonts/DePixelHalbfett.otf" id="2_7ldnj"]
+[ext_resource type="Script" path="res://scripts/MainMenuOpt.gd" id="2_67no2"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.421978, 0.421875)
+texture = ExtResource("1_en5of")
+
+[node name="MainMenuOpt" type="VBoxContainer" parent="."]
+offset_left = 454.0
+offset_top = 216.0
+offset_right = 710.0
+offset_bottom = 265.0
+script = ExtResource("2_67no2")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7ldnj")
+theme_override_font_sizes/font_size = 32
+text = "New Game"
+
+[node name="Button2" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7ldnj")
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="Button3" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7ldnj")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[connection signal="pressed" from="MainMenuOpt/Button" to="MainMenuOpt" method="_on_button_pressed"]

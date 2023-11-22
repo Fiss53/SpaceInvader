@@ -1,9 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700217303
-default_env.tres::Environment::3563124390535765428::1700217303::0::1::::<><>::
+::res://::1700593106
+default_env.tres::Environment::3563124390535765428::1700583771::0::1::::<><>::
 HP.gd::GDScript::-1::1700149099::0::1::::<>Node2D<>::
-::res://assets/::1700217564
+::res://assets/::1700583544
 6AiWJgLP-wallha.com.png::CompressedTexture2D::1506242814244122945::1700216895::1700216967::1::::<><>::
+11.png::CompressedTexture2D::2297290433953183902::1700149099::1700583401::1::::<><>::
 gros.png::CompressedTexture2D::6321567737058831116::1700149099::1700149099::1::::<><>::
 hearts-expor300_500t-export.png::CompressedTexture2D::7468138496354866307::1700149099::1700149099::1::::<><>::
 icon.png::CompressedTexture2D::6401084672738205852::1700149099::1700149099::1::::<><>::
@@ -14,7 +15,15 @@ xwing_500.png::CompressedTexture2D::1223880972612890925::1700146997::1700150964:
 xwing_600.png::CompressedTexture2D::1550035208086250507::1700147012::1700150964::1::::<><>::
 xwing_700.png::CompressedTexture2D::4748325252390968205::1700151022::1700151032::1::::<><>::
 x_wing.png::CompressedTexture2D::8828227893613450585::1700149099::1700149099::1::::<><>::
-::res://assets/Laser Sprites/::1700150950
+::res://assets/Background/::1700583545
+6AiWJgLP-wallha.com.png::CompressedTexture2D::1506242814244122945::1700216895::1700583545::1::::<><>::
+::res://assets/Hearts/::1700583507
+coeur.png::CompressedTexture2D::79706225426193551::1700149099::1700583507::1::::<><>::
+hearts-expor100t.png::CompressedTexture2D::995089608774172239::1700149099::1700583507::1::::<><>::
+hearts-expor200t.png::CompressedTexture2D::5816540414530247057::1700149099::1700583507::1::::<><>::
+hearts-expor300t.png::CompressedTexture2D::2061130018475163746::1700149099::1700583507::1::::<><>::
+hearts-expor300_500t-export.png::CompressedTexture2D::7468138496354866307::1700149099::1700583507::1::::<><>::
+::res://assets/Laser Sprites/::1700583578
 01.png::CompressedTexture2D::5975013802299823275::1700149099::1700149099::1::::<><>::
 02.png::CompressedTexture2D::79954551517295136::1700149099::1700149099::1::::<><>::
 03.png::CompressedTexture2D::7789825129290331549::1700149099::1700149099::1::::<><>::
@@ -89,7 +98,12 @@ coeur.png::CompressedTexture2D::79706225426193551::1700149099::1700149099::1::::
 hearts-expor100t.png::CompressedTexture2D::995089608774172239::1700149099::1700149099::1::::<><>::
 hearts-expor200t.png::CompressedTexture2D::5816540414530247057::1700149099::1700149099::1::::<><>::
 hearts-expor300t.png::CompressedTexture2D::2061130018475163746::1700149099::1700149099::1::::<><>::
-::res://fonts/::1700149099
+::res://assets/Player/::1700583539
+xwing_500.png::CompressedTexture2D::1223880972612890925::1700146997::1700583526::1::::<><>::
+xwing_600.png::CompressedTexture2D::1550035208086250507::1700147012::1700583526::1::::<><>::
+xwing_700.png::CompressedTexture2D::4748325252390968205::1700151022::1700583526::1::::<><>::
+x_wing.png::CompressedTexture2D::8828227893613450585::1700149099::1700583526::1::::<><>::
+::res://fonts/::1700583401
 11.png::CompressedTexture2D::2297290433953183902::1700149099::1700149099::1::::<><>::
 DePixelBreit.otf::FontFile::4881168699261453328::1700149099::1700149099::1::::<><>::
 DePixelBreit.ttf::FontFile::364226660953687233::1700149099::1700149099::1::::<><>::
@@ -115,14 +129,19 @@ DePixelSchmal.otf::FontFile::1959604361139379583::1700149099::1700149099::1::::<
 DePixelSchmal.ttf::FontFile::5392698206871446797::1700149099::1700149099::1::::<><>::
 depixelschmal.woff::FontFile::5448457162516729468::1700149099::1700149099::1::::<><>::
 depixelschmal.woff2::FontFile::2610955655801887252::1700149099::1700149099::1::::<><>::
-::res://scene/::1700217303
+::res://scene/::1700583771
 CollisionShape2D.gd::GDScript::-1::1700149099::0::1::::<>CollisionShape2D<>::
-Enemy.gd::GDScript::-1::1700149099::0::1::::<>Node2D<>::
-Enemy.tscn::PackedScene::2700265245947520490::1700217303::0::1::::<><>::res://scene/Enemy.gd<>uid://1a38cr0utdqr::::res://assets/Laser Sprites/11.png
-EnemyPool.gd::GDScript::-1::1700149099::0::1::::<>Node2D<>::
-HP.tscn::PackedScene::6291002965738645966::1700217303::0::1::::<><>::res://scene/lives.gd<>uid://denvfdkx44348::::res://assets/hearts-expor300_500t-export.png
+Enemy.gd::GDScript::-1::1700390030::0::1::::<>Node2D<>::
+Enemy.tscn::PackedScene::2700265245947520490::1700583771::0::1::::<><>::res://scripts/Enemy.gd<>uid://o1hrbihd0r0b::::res://assets/laser400.png
+EnemyPool.gd::GDScript::-1::1700226971::0::1::::<>Node2D<>::
+HP.tscn::PackedScene::6291002965738645966::1700583698::0::1::::<><>::res://scripts/lives.gd<>uid://denvfdkx44348::::res://assets/Hearts/hearts-expor300_500t-export.png
 lives.gd::GDScript::-1::1700149099::0::1::::<>Node2D<>::
-MainScene.tscn::PackedScene::644752380420612036::1700217303::0::1::::<><>::res://scripts/Player.gd<>uid://b8weht8njfawj::::res://assets/xwing_700.png<>res://scene/CollisionShape2D.gd<>res://scene/EnemyPool.gd<>uid://cvvn5ucspw8kw::::res://scene/HP.tscn<>res://scripts/RichTextLabel.gd<>uid://bdled44q30bpf::::res://fonts/DePixelHalbfett.otf<>uid://vpvumsp5bjgj::::res://assets/6AiWJgLP-wallha.com.png
-::res://scripts/::1700215237
-Player.gd::GDScript::-1::1700215237::0::1::::<>CharacterBody2D<>::
-RichTextLabel.gd::GDScript::-1::1700213630::0::1::::<>RichTextLabel<>::
+MainScene.tscn::PackedScene::644752380420612036::1700583698::0::1::::<><>::res://scripts/Player.gd<>uid://vpvumsp5bjgj::::res://assets/Background/6AiWJgLP-wallha.com.png<>uid://b8weht8njfawj::::res://assets/Player/xwing_700.png<>res://scripts/CollisionShape2D.gd<>uid://cvvn5ucspw8kw::::res://scene/HP.tscn<>res://scripts/RichTextLabel.gd<>uid://bdled44q30bpf::::res://fonts/DePixelHalbfett.otf<>res://scripts/EnemyPool.gd
+::res://scripts/::1700583771
+CollisionShape2D.gd::GDScript::-1::1700149099::0::1::::<>CollisionShape2D<>::
+Enemy.gd::GDScript::-1::1700583771::0::1::::<>Node2D<>::
+EnemyPool.gd::GDScript::-1::1700226971::0::1::::<>Node2D<>::
+HP.gd::GDScript::-1::1700149099::0::1::::<>Node2D<>::
+lives.gd::GDScript::-1::1700149099::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1700583710::0::1::::<>CharacterBody2D<>::
+RichTextLabel.gd::GDScript::-1::1700583420::0::1::::<>RichTextLabel<>::

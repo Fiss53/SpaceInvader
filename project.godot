@@ -17,7 +17,7 @@ config/icon="res://assets/icon.png"
 
 [autoload]
 
-Hp="*res://HP.gd"
+Hp="*res://scripts/HP.gd"
 
 [gui]
 

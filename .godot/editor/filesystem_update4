@@ -1,6 +1,8 @@
 res://default_env.tres
 res://scene/MainScene.tscn
 res://scripts/RichTextLabel.gd
+res://scripts/Enemy.gd
 res://scene/Enemy.tscn
 res://scene/HP.tscn
-res://scripts/Player.gd
+res://scene/menu.tscn
+res://scripts/MainMenuOpt.gd

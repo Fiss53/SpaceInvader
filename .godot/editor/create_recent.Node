@@ -1,7 +1,10 @@
-TextureRect
+Button
+VBoxContainer
+RichTextLabel
 Sprite2D
+Area2D
+TextureRect
 CollisionShape2D
 StaticBody2D
 CharacterBody2D
-RichTextLabel
 TextEdit
