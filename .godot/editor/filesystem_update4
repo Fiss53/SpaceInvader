@@ -1,7 +1,9 @@
 res://default_env.tres
-res://scene/MainScene.tscn
 res://scripts/RichTextLabel.gd
+res://scene/menu.tscn
 res://scripts/MainMenuOpt.gd
+res://scene/MainScene.tscn
+res://scripts/Player.gd
 res://scene/Enemy.tscn
 res://scene/HP.tscn
-res://scene/menu.tscn
+res://scene/end_game_menu.tscn
