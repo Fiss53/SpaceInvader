@@ -4,22 +4,15 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
 var rng = RandomNumberGenerator.new()
 var max_enemy = 10	
 var enemy_number = 0
 var hors_limite = 800
 @export var enemy_count_score = 0
-
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var enemyH
-	randomize()
-	enemyH = load("scene/Enemy.tscn").instantiate()
-	enemyH.position.x = randf_range(0, 1000)
-	enemyH.position.y = randf_range(-1000, -200)
-	add_child(enemyH)
-	enemy_number += 1
+	pass
 	
 func get_all_children(in_node,arr:=[]):
 	arr.push_back(in_node)
