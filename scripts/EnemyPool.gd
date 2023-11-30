@@ -9,7 +9,7 @@ var rng = RandomNumberGenerator.new()
 var max_enemy = 10	
 var enemy_number = 0
 var hors_limite = 800
-var enemy_count_score = 0
+@export var enemy_count_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,6 +26,8 @@ func get_all_children(in_node,arr:=[]):
 	for child in in_node.get_children():
 		arr = get_all_children(child,arr)
 	return arr
+	
+	
 
 
 

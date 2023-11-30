@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbqt7et67wuj5"]
+
+[ext_resource type="Script" path="res://scene/c_credit.gd" id="1_5cf0k"]
+[ext_resource type="Texture2D" uid="uid://vpvumsp5bjgj" path="res://assets/6AiWJgLP-wallha.com.png" id="2_cflwp"]
+
+[node name="CCredit" type="Node2D"]
+script = ExtResource("1_5cf0k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.421978, 0.421875)
+texture = ExtResource("2_cflwp")
+
+[node name="Window" type="Window" parent="."]
+initial_position = 2
+size = Vector2i(400, 300)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[b]Un grand merci au petit gars qui nous ont aidé :[/b]
+
+- Ulric-Sensei (Il nous a tout appris)
+- Patricku-Chan (Graçe à lui on a un menu et ce credit)
+- Nous pour ce chef d'oeuvre digne de Van Gogh"
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]

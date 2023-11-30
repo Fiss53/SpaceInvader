@@ -1,7 +1,9 @@
 Button
-VBoxContainer
-RichTextLabel
+LineEdit
 Sprite2D
+RichTextLabel
+Window
+VBoxContainer
 Area2D
 TextureRect
 CollisionShape2D

@@ -12,10 +12,10 @@ scale = Vector2(0.421978, 0.421875)
 texture = ExtResource("1_en5of")
 
 [node name="MainMenuOpt" type="VBoxContainer" parent="."]
-offset_left = 454.0
-offset_top = 201.0
-offset_right = 710.0
-offset_bottom = 409.0
+offset_left = 479.0
+offset_top = 204.0
+offset_right = 735.0
+offset_bottom = 465.0
 script = ExtResource("2_67no2")
 metadata/_edit_group_ = true
 
@@ -37,6 +37,12 @@ theme_override_fonts/font = ExtResource("2_7ldnj")
 theme_override_font_sizes/font_size = 32
 text = "Settings"
 
+[node name="Credits" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7ldnj")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+
 [node name="Quit" type="Button" parent="MainMenuOpt"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_7ldnj")
@@ -46,4 +52,5 @@ text = "Quit"
 [connection signal="pressed" from="MainMenuOpt/Resume" to="MainMenuOpt" method="_on_resume_pressed"]
 [connection signal="pressed" from="MainMenuOpt/NewGame" to="MainMenuOpt" method="_on_button_pressed"]
 [connection signal="pressed" from="MainMenuOpt/Settings" to="MainMenuOpt" method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenuOpt/Credits" to="MainMenuOpt" method="_on_credits_pressed"]
 [connection signal="pressed" from="MainMenuOpt/Quit" to="MainMenuOpt" method="_on_quit_pressed"]

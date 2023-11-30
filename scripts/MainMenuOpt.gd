@@ -22,9 +22,11 @@ func _on_quit_pressed():
 
 
 func _on_settings_pressed():
-	var mainscene = load("res://scene/MainScene.tscn")
-	var mainscene_load = mainscene.instance()
+	pass
 
 
 func _on_resume_pressed():
-	get_tree().change_scene_to_file("res://scene/MainScene.tscn")
+	get_tree().hide()
+
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://scene/c_credit.tscn")
