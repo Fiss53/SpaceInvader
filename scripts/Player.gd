@@ -7,6 +7,7 @@ var speed = 500
 var screen_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	screen_size = get_viewport_rect().size
 	velocity.x = 0
 	velocity.y = 0

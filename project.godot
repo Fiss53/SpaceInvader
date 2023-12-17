@@ -21,6 +21,13 @@ Hp="*res://scripts/HP.gd"
 MenuUsername="*res://scripts/MenuUsername.gd"
 EnemyPool="*res://scripts/EnemyPool.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/stretch/mode="viewport"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

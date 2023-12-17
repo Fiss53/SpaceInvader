@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dilbiqupxcd36"]
 
-[ext_resource type="Texture2D" uid="uid://vpvumsp5bjgj" path="res://assets/6AiWJgLP-wallha.com.png" id="1_5g52x"]
+[ext_resource type="Texture2D" uid="uid://vpvumsp5bjgj" path="res://assets/Background/6AiWJgLP-wallha.com.png" id="1_5g52x"]
 
 [node name="EndGameMenu" type="Node2D"]
 

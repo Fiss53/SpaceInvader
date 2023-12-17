@@ -1,0 +1,8 @@
+res://scene/c_credit.tscn::dbc1faae2e6aefab2da86a6d14e17469::1701979974::res://.godot/exported/133200997/export-3f96b19044b314d6ef185e472772740a-c_credit.scn
+res://scene/end_game_menu.tscn::a41966c8bb2265db7edbec9bc01ae495::1701955726::res://.godot/exported/133200997/export-0f2e035b35e2d56037668327a5b5fc90-end_game_menu.scn
+res://scene/Enemy.tscn::69df849c1605054c3e233097b9b5381f::1701955726::res://.godot/exported/133200997/export-7acea17c0b158c4f01f203f665622cff-Enemy.scn
+res://scene/HP.tscn::b3d35e8f1d7303db910be4bd06a011f6::1701955726::res://.godot/exported/133200997/export-3968f342be31a19646a0cfe021fc2351-HP.scn
+res://scene/MainScene.tscn::9d21f82178bec96d4eb1b2e54e3cb618::1701961896::res://.godot/exported/133200997/export-b566e485362aa439d578f08df0dd6328-MainScene.scn
+res://scene/menu.tscn::6c9ec3f3d9d08e68f15283ad03d9f1a3::1701961896::res://.godot/exported/133200997/export-425af8aabff62af1784d609241d4b88c-menu.scn
+res://scene/menu_pseudo.tscn::49d71fb52072f6cd06c0bc919b17134c::1701961897::res://.godot/exported/133200997/export-41f4ec901e122ea9b3f4b6bf9f63d125-menu_pseudo.scn
+res://default_env.tres::45f5b3a1224d4782e6eaa7d23ea0c0ab::1701979974::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
