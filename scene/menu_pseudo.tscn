@@ -14,10 +14,10 @@ texture = ExtResource("3_7wi1v")
 
 [node name="MenuUsername" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(200, 200)
-offset_left = 823.0
-offset_top = 540.0
-offset_right = 1030.0
-offset_bottom = 668.0
+offset_left = 859.0
+offset_top = 542.0
+offset_right = 1066.0
+offset_bottom = 742.0
 script = ExtResource("2_qs8v6")
 metadata/_edit_group_ = true
 
@@ -33,5 +33,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_v2ulv")
 text = "Enter"
 
+[connection signal="text_changed" from="MenuUsername/LineEdit" to="MenuUsername" method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="MenuUsername/LineEdit" to="MenuUsername" method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="MenuUsername/Button" to="MenuUsername" method="_on_button_pressed"]

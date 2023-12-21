@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://qbj1lh2u0vsw"]
+[gd_scene load_steps=5 format=3 uid="uid://qbj1lh2u0vsw"]
 
 [ext_resource type="Texture2D" uid="uid://pyeugeuasamn" path="res://assets/Background/background_moon.png" id="1_wpj0v"]
 [ext_resource type="FontFile" uid="uid://bdled44q30bpf" path="res://fonts/DePixelHalbfett.otf" id="2_3gfyb"]
 [ext_resource type="Script" path="res://scripts/menu/Score.gd" id="4_bsuhd"]
+[ext_resource type="Script" path="res://scripts/MainMenuOpt.gd" id="4_clwvd"]
 
 [node name="EndGameMenu" type="Node2D"]
 
@@ -13,13 +14,50 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_wpj0v")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 597.0
-offset_top = 476.0
-offset_right = 1440.0
-offset_bottom = 808.0
+offset_left = 579.0
+offset_top = 223.0
+offset_right = 1422.0
+offset_bottom = 555.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 50
 theme_override_fonts/font = ExtResource("2_3gfyb")
 theme_override_font_sizes/font_size = 100
 text = "Score"
 script = ExtResource("4_bsuhd")
+
+[node name="MainMenuOpt" type="VBoxContainer" parent="."]
+offset_left = 808.0
+offset_top = 446.0
+offset_right = 1064.0
+offset_bottom = 707.0
+script = ExtResource("4_clwvd")
+metadata/_edit_group_ = true
+
+[node name="NewGame" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gfyb")
+theme_override_font_sizes/font_size = 32
+text = "New Game"
+
+[node name="Settings" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gfyb")
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="Credits" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gfyb")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+
+[node name="Quit" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gfyb")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[connection signal="pressed" from="MainMenuOpt/NewGame" to="MainMenuOpt" method="_on_button_pressed"]
+[connection signal="pressed" from="MainMenuOpt/Settings" to="MainMenuOpt" method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenuOpt/Credits" to="MainMenuOpt" method="_on_credits_pressed"]
+[connection signal="pressed" from="MainMenuOpt/Quit" to="MainMenuOpt" method="_on_quit_pressed"]

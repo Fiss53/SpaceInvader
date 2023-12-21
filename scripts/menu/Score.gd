@@ -10,4 +10,4 @@ func _input(ev):
 		get_tree().quit()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_text("Score: " + str(get_node("/root/State").enemy_count_score))
+	set_text(get_node("/root/State").playerUsername + " Score: " + str(get_node("/root/State").enemy_count_score))

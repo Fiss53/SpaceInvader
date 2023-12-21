@@ -5,6 +5,7 @@ extends VBoxContainer
 func _ready():
 	if(get_tree().paused == true):
 		get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
