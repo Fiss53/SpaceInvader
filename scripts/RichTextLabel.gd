@@ -8,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_text("Score: " + str(get_node("/root/MainScene/EnemyPool").enemy_count_score))
+	set_text("Score: " + str(get_node("../EnemyPool").enemy_count_score))

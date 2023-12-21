@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://01nq1dan7uba"]
+[gd_scene load_steps=4 format=3 uid="uid://dhsbthvw13blj"]
 
 [ext_resource type="FontFile" uid="uid://bdled44q30bpf" path="res://fonts/DePixelHalbfett.otf" id="2_7ldnj"]
 [ext_resource type="Script" path="res://scripts/MainMenuOpt.gd" id="2_67no2"]
@@ -7,7 +7,6 @@
 [node name="Menu" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-texture_filter = 1
 position = Vector2(960, 540)
 scale = Vector2(4, 4)
 texture = ExtResource("3_whnic")
@@ -19,6 +18,12 @@ offset_right = 1086.0
 offset_bottom = 706.0
 script = ExtResource("2_67no2")
 metadata/_edit_group_ = true
+
+[node name="Resume" type="Button" parent="MainMenuOpt"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7ldnj")
+theme_override_font_sizes/font_size = 32
+text = "Resume"
 
 [node name="NewGame" type="Button" parent="MainMenuOpt"]
 layout_mode = 2
@@ -44,6 +49,7 @@ theme_override_fonts/font = ExtResource("2_7ldnj")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 
+[connection signal="pressed" from="MainMenuOpt/Resume" to="MainMenuOpt" method="_on_resume_pressed"]
 [connection signal="pressed" from="MainMenuOpt/NewGame" to="MainMenuOpt" method="_on_button_pressed"]
 [connection signal="pressed" from="MainMenuOpt/Settings" to="MainMenuOpt" method="_on_settings_pressed"]
 [connection signal="pressed" from="MainMenuOpt/Credits" to="MainMenuOpt" method="_on_credits_pressed"]

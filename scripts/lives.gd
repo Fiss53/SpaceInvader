@@ -37,7 +37,7 @@ func _process(delta):
 		var playerName = MenuUsername.playerUsername
 		var playerScore = EnemyPool.enemy_count_score
 		
-		for i in classementDico:
-			if classementDico[i] < playerScore:
-				var temp = classementDico[i]
-		get_tree().reload_current_scene()
+		#for i in classementDico:
+		#	if classementDico[i] < playerScore:
+		#		var temp = classementDico[i]
+		get_tree().change_scene_to_file("res://scene/Menu/end_game_menu.tscn")

@@ -10,12 +10,8 @@ var enemy_number = 0
 var hors_limite = 1920
 var sizeScreenx
 var sizeScreeny 
-@export var enemy_count_score = 0
-	
+var enemy_count_score = 0
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	sizeScreenx = get_viewport().get_size().x
-	sizeScreeny = get_viewport().get_size().y
 	
 func get_all_children(in_node,arr:=[]):
 	arr.push_back(in_node)
@@ -29,6 +25,8 @@ func get_all_children(in_node,arr:=[]):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	sizeScreenx = get_viewport().get_size().x
+	sizeScreeny = get_viewport().get_size().y
 	if enemy_number < max_enemy:
 		var enemy = load("scene/Enemy.tscn").instantiate()
 		var enemyArray = get_all_children(enemy,[])

@@ -1,50 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://beqa8ebru37oo"]
+[gd_scene load_steps=5 format=3 uid="uid://beqa8ebru37oo"]
 
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_qcaq2"]
-[ext_resource type="Texture2D" uid="uid://dxg25nbkrsxb4" path="res://assets/laser.png" id="2_oeami"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q30w6"]
-atlas = ExtResource("2_oeami")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qugis"]
-atlas = ExtResource("2_oeami")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u545p"]
-atlas = ExtResource("2_oeami")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hw2ne"]
-atlas = ExtResource("2_oeami")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ce80"]
-atlas = ExtResource("2_oeami")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_w4fkv"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q30w6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qugis")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u545p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hw2ne")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8ce80")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://bb66fajvls2er" path="res://assets/laser_.png" id="3_guuux"]
+[ext_resource type="Texture2D" uid="uid://bapgb5cds2kuf" path="res://assets/particule.png" id="3_thcry"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(124.009, 38.47)
@@ -54,26 +12,29 @@ position = Vector2(365, 198)
 rotation = -1.58486
 script = ExtResource("1_qcaq2")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(-42.0099, 0.409302)
+amount = 10
+texture = ExtResource("3_thcry")
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+spread = 41.7
+gravity = Vector2(0, 0)
+initial_velocity_max = 138.75
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 rotation = 1.5708
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_w4fkv")
-frame_progress = 0.945727
+texture = ExtResource("3_guuux")
 
 [node name="EnemyHitBox" type="Area2D" parent="."]
 rotation = 0.013822
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
+texture_filter = 1
 position = Vector2(2.99945, 2.25073)
 shape = SubResource("1")
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(-42.0099, 0.409271)
-emission_shape = 1
-emission_sphere_radius = 9.91
-spread = 10.35
-gravity = Vector2(0, 0)
-initial_velocity_max = 138.75
 
 [connection signal="body_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_body_entered"]
