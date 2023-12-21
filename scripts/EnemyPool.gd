@@ -5,12 +5,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 var rng = RandomNumberGenerator.new()
-var max_enemy = 10
-var enemy_number = 0
-var hors_limite = 1920
 var sizeScreenx
 var sizeScreeny 
-var enemy_count_score = 0
 # Called when the node enters the scene tree for the first time.
 	
 func get_all_children(in_node,arr:=[]):
@@ -25,9 +21,10 @@ func get_all_children(in_node,arr:=[]):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var state = get_node("/root/State")
 	sizeScreenx = get_viewport().get_size().x
 	sizeScreeny = get_viewport().get_size().y
-	if enemy_number < max_enemy:
+	if state.enemy_number < state.max_enemy:
 		var enemy = load("scene/Enemy.tscn").instantiate()
 		var enemyArray = get_all_children(enemy,[])
 		var randValx = randf_range(0, sizeScreenx)
@@ -41,12 +38,13 @@ func _process(delta):
 		enemy.position.x = randValx
 		enemy.position.y = randValy
 		add_child(enemy)
-		enemy_number += 1
+		state.enemy_number += 1
 	
 
 func sortie(area):
+	var state = get_node("/root/State")
 	for enemy in get_children():
 		if(enemy.position.y >= sizeScreeny):
 			enemy.queue_free()
-			enemy_number -= 1
-			enemy_count_score += 1
+			state.enemy_number -= 1
+			state.enemy_count_score += 1

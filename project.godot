@@ -19,7 +19,7 @@ config/icon="res://assets/icon.png"
 
 Hp="*res://scripts/HP.gd"
 MenuUsername="*res://scripts/MenuUsername.gd"
-EnemyPool="*res://scripts/EnemyPool.gd"
+State="*res://scripts/State.gd"
 
 [display]
 

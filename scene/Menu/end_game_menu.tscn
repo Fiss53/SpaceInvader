@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://qbj1lh2u0vsw"]
+[gd_scene load_steps=4 format=3 uid="uid://qbj1lh2u0vsw"]
 
-[ext_resource type="Script" path="res://scripts/menu/end_game_menu.gd" id="1_iqugd"]
 [ext_resource type="Texture2D" uid="uid://pyeugeuasamn" path="res://assets/Background/background_moon.png" id="1_wpj0v"]
 [ext_resource type="FontFile" uid="uid://bdled44q30bpf" path="res://fonts/DePixelHalbfett.otf" id="2_3gfyb"]
-[ext_resource type="Script" path="res://scripts/RichTextLabel.gd" id="3_s1ch7"]
+[ext_resource type="Script" path="res://scripts/menu/Score.gd" id="4_bsuhd"]
 
 [node name="EndGameMenu" type="Node2D"]
-script = ExtResource("1_iqugd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -14,12 +12,14 @@ position = Vector2(960, 540)
 scale = Vector2(4, 4)
 texture = ExtResource("1_wpj0v")
 
-[node name="Score" type="RichTextLabel" parent="."]
-offset_left = 764.0
-offset_top = 244.0
-offset_right = 1469.0
-offset_bottom = 445.0
-theme_override_fonts/normal_font = ExtResource("2_3gfyb")
-theme_override_font_sizes/normal_font_size = 100
-text = "SCORE"
-script = ExtResource("3_s1ch7")
+[node name="Label" type="Label" parent="."]
+offset_left = 597.0
+offset_top = 476.0
+offset_right = 1440.0
+offset_bottom = 808.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("2_3gfyb")
+theme_override_font_sizes/font_size = 100
+text = "Score"
+script = ExtResource("4_bsuhd")

@@ -28,6 +28,7 @@ class Sorter:
 var sorter = Sorter.new()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var state = get_node("/root/State")
 	if(Hp.lives == 2):
 		$Sprite2D.hide()
 	if(Hp.lives == 1):
@@ -35,7 +36,7 @@ func _process(delta):
 	if(Hp.lives == 0):
 		var classementDico = open_file_classement()
 		var playerName = MenuUsername.playerUsername
-		var playerScore = EnemyPool.enemy_count_score
+		var playerScore = state.enemy_count_score
 		
 		#for i in classementDico:
 		#	if classementDico[i] < playerScore:

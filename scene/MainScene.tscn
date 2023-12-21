@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://pyeugeuasamn" path="res://assets/Background/background_moon.png" id="1_ue48b"]
 [ext_resource type="Texture2D" uid="uid://b8weht8njfawj" path="res://assets/xwing_700.png" id="3_jpfov"]
 [ext_resource type="PackedScene" uid="uid://cvvn5ucspw8kw" path="res://scene/HP.tscn" id="5"]
-[ext_resource type="Script" path="res://scripts/RichTextLabel.gd" id="6_4xh0a"]
 [ext_resource type="FontFile" uid="uid://bdled44q30bpf" path="res://fonts/DePixelHalbfett.otf" id="6_34uh1"]
 [ext_resource type="Script" path="res://scripts/EnemyPool.gd" id="8_ys52u"]
 
@@ -42,6 +41,20 @@ func _process(delta):
 size = Vector2(1920, 1080)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qfdu3"]
+
+[sub_resource type="GDScript" id="GDScript_867wt"]
+script/source = "extends RichTextLabel
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	set_text(\"Score: \" + str(get_node(\"/root/State\").enemy_count_score))
+"
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i2ims"]
 a = Vector2(1.99538, -1276)
@@ -97,7 +110,7 @@ offset_bottom = 122.0
 theme_override_fonts/normal_font = ExtResource("6_34uh1")
 theme_override_font_sizes/normal_font_size = 28
 text = "1 score"
-script = ExtResource("6_4xh0a")
+script = SubResource("GDScript_867wt")
 
 [node name="EnemyPool" type="Node2D" parent="."]
 position = Vector2(6, 1)
