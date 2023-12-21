@@ -68,4 +68,12 @@ rotation = 0.013822
 position = Vector2(2.99945, 2.25073)
 shape = SubResource("1")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-42.0099, 0.409271)
+emission_shape = 1
+emission_sphere_radius = 9.91
+spread = 10.35
+gravity = Vector2(0, 0)
+initial_velocity_max = 138.75
+
 [connection signal="body_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_body_entered"]

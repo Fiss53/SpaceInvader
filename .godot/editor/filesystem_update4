@@ -1,10 +1,9 @@
 res://default_env.tres
-res://scene/c_credit.tscn
-res://scripts/RichTextLabel.gd
 res://scene/menu.tscn
+res://scripts/RichTextLabel.gd
 res://scene/MainScene.tscn
+res://scene/c_credit.tscn
 res://scene/menu_pseudo.tscn
-res://scene/HP.tscn
 res://scene/end_game_menu.tscn
-res://scripts/EnemyPool.gd
-res://scripts/Player.gd
+res://scene/HP.tscn
+res://scene/Enemy.tscn
