@@ -18,7 +18,6 @@ config/icon="res://assets/icon.png"
 [autoload]
 
 Hp="*res://scripts/HP.gd"
-MenuUsername="*res://scripts/MenuUsername.gd"
 State="*res://scripts/State.gd"
 
 [display]

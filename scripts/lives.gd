@@ -13,14 +13,21 @@ func _ready():
 
 func open_file_classement():
 	var index = 0
-	var f = FileAccess.open("res://ressource/classement.csv",FileAccess.READ_WRITE)
+	var f = FileAccess.open("res://ressource/classement/classement.csv",FileAccess.READ)
 	var classement = Array()
 	while !f.eof_reached():
 		var line = f.get_csv_line()
 		classement.append(line)
 	print(classement)
+	f.close()
 	return classement
 
+func close_file_classement(classement):
+	var f = FileAccess.open("res://ressource/classement/classement.csv",FileAccess.WRITE)
+	for line in classement:
+		f.store_csv_line(line)
+	get_node("/root/State").classement = classement
+	f.close()
 
 class Sorter:
 	func custom_sort(a, b):
@@ -30,15 +37,30 @@ var sorter = Sorter.new()
 func _process(delta):
 	var state = get_node("/root/State")
 	if(Hp.lives == 2):
-		$Sprite2D.hide()
+		$Sprite1.hide()
 	if(Hp.lives == 1):
-		$Sprite2.hide()	
+		$Sprite2.hide()
 	if(Hp.lives == 0):
 		var classementDico = open_file_classement()
+		print_debug(classementDico)
 		var playerName = state.playerUsername
 		var playerScore = state.enemy_count_score
+		var scoreSupToClass = false
+		var temp
+		for pNameScore in classementDico:
+			if pNameScore[-1] == "": 
+				break
+			if scoreSupToClass: #lower of one every other player
+				print(temp)
+				var _temp = temp
+				temp = pNameScore
+				pNameScore = _temp
+			if int(pNameScore[-1]) < playerScore && !scoreSupToClass:
+				temp = pNameScore 
+				scoreSupToClass = true
+				pNameScore[-1] = str(playerScore)
+				pNameScore[0] = playerName
 		
-		#for i in classementDico:
-		#	if classementDico[i] < playerScore:
-		#		var temp = classementDico[i]
+		print(classementDico)
+		close_file_classement(classementDico)
 		get_tree().change_scene_to_file("res://scene/Menu/end_game_menu.tscn")

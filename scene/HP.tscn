@@ -6,17 +6,17 @@
 [node name="HP" type="Node2D"]
 script = ExtResource("2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1793.12, 41.32)
-scale = Vector2(0.167466, 0.168889)
+[node name="Sprite1" type="Sprite2D" parent="."]
+position = Vector2(1749, 42)
+scale = Vector2(0.25, 0.253)
 texture = ExtResource("2_awvl8")
 
 [node name="Sprite2" type="Sprite2D" parent="."]
-position = Vector2(1835.12, 41.32)
-scale = Vector2(0.167466, 0.168889)
+position = Vector2(1812, 42)
+scale = Vector2(0.25, 0.253)
 texture = ExtResource("2_awvl8")
 
 [node name="Sprite3" type="Sprite2D" parent="."]
 position = Vector2(1876.12, 41.32)
-scale = Vector2(0.167466, 0.168889)
+scale = Vector2(0.25, 0.253)
 texture = ExtResource("2_awvl8")

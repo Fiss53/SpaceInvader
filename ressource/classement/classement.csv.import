@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c8sijwcxy4u1y"
+
+[deps]
+
+files=["res://ressource/classement/classement.103.translation"]
+
+source_file="res://ressource/classement/classement.csv"
+dest_files=["res://ressource/classement/classement.103.translation"]
+
+[params]
+
+compress=true
+delimiter=0
