@@ -1,5 +1,7 @@
-CollisionPolygon2D
 Label
+HBoxContainer
+VBoxContainer
+CollisionPolygon2D
 Sprite2D
 CPUParticles2D
 AnimatedSprite2D
@@ -7,7 +9,6 @@ Button
 LineEdit
 RichTextLabel
 Window
-VBoxContainer
 Area2D
 TextureRect
 CollisionShape2D

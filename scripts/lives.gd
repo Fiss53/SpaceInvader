@@ -25,14 +25,13 @@ func open_file_classement():
 func close_file_classement(classement):
 	var f = FileAccess.open("res://ressource/classement/classement.csv",FileAccess.WRITE)
 	for line in classement:
+		if line[-1] == "":
+			break
 		f.store_csv_line(line)
 	get_node("/root/State").classement = classement
 	f.close()
 
-class Sorter:
-	func custom_sort(a, b):
-		return a > b
-var sorter = Sorter.new()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var state = get_node("/root/State")

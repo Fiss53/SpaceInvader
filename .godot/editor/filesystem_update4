@@ -1,12 +1,12 @@
 res://default_env.tres
-res://scene/MainScene.tscn
-res://scripts/lives.gd
+res://scene/Menu/end_game_menu.tscn
+res://scene/Menu/scoreName.gd
 res://scene/menu.tscn
-res://scripts/State.gd
+res://scene/MainScene.tscn
 res://scene/c_credit.tscn
 res://scene/HP.tscn
 res://scene/Enemy.tscn
 res://scene/menu_pseudo.tscn
-res://scene/Menu/end_game_menu.tscn
-res://ressource/classement/classement.38.translation
 res://ressource/classement/classement.103.translation
+res://scripts/menu/ScoreNumber.gd
+res://scripts/menu/Score.gd
