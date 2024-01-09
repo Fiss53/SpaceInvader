@@ -24,27 +24,31 @@ func _process(delta):
 	var state = get_node("/root/State")
 	sizeScreenx = get_viewport().get_size().x
 	sizeScreeny = get_viewport().get_size().y
+	
+	state.max_enemy = 10+((state.enemy_count_score/20)*5)
+	
 	if state.enemy_number < state.max_enemy:
 		var enemy = load("scene/Enemy.tscn").instantiate()
 		var enemyArray = get_all_children(enemy,[])
 		var randValx = randf_range(0, sizeScreenx)
-		var randValy = randf_range(-1000, 0)
-		for i in enemyArray:
-			var otherEnemyX = i.position.x
-			var otherEnemyY = i.position.y
-			while(randValx > otherEnemyX  && randValx < otherEnemyX ):# pas bon
-				randValx = randf_range(0, 1000)
-			
+		var randValy = randf_range(-2000, 0)
+		
 		enemy.position.x = randValx
 		enemy.position.y = randValy
 		add_child(enemy)
 		state.enemy_number += 1
-	
 
 func sortie(area):
+	sizeScreenx = get_viewport().get_size().x
+	sizeScreeny = get_viewport().get_size().y
+	var estla = false
 	var state = get_node("/root/State")
 	for enemy in get_children():
 		if(enemy.position.y >= sizeScreeny):
+			remove_child(enemy)
 			enemy.queue_free()
-			state.enemy_number -= 1
-			state.enemy_count_score += 1
+			estla = true
+	if estla:
+		state.enemy_number -= 1
+		state.enemy_count_score += 1
+

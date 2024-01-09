@@ -21,9 +21,9 @@ func _process(delta):
 
 
 func _on_enemy_hit_box_body_entered(body):
-	if body.name == "Player" && Hp.lives > 0:
-		Hp.lives -= 1
-	elif body.name == "Player" && Hp.lives == 0:
+	if body.name == "Player" && HpScript.lives > 0:
+		HpScript.lives -= 1
+	elif body.name == "Player" && HpScript.lives == 0:
 		get_tree().reload_current_scene()
 
 

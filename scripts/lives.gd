@@ -8,7 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Hp.lives = 3
+	pass
 
 
 func open_file_classement():
@@ -35,31 +35,30 @@ func close_file_classement(classement):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var state = get_node("/root/State")
-	if(Hp.lives == 2):
-		$Sprite1.hide()
-	if(Hp.lives == 1):
-		$Sprite2.hide()
-	if(Hp.lives == 0):
-		var classementDico = open_file_classement()
-		print_debug(classementDico)
-		var playerName = state.playerUsername
-		var playerScore = state.enemy_count_score
-		var scoreSupToClass = false
-		var temp
-		for pNameScore in classementDico:
-			if pNameScore[-1] == "": 
-				break
-			if scoreSupToClass: #lower of one every other player
-				print(temp)
-				var _temp = temp
-				temp = pNameScore
-				pNameScore = _temp
-			if int(pNameScore[-1]) < playerScore && !scoreSupToClass:
-				temp = pNameScore 
-				scoreSupToClass = true
-				pNameScore[-1] = str(playerScore)
-				pNameScore[0] = playerName
-		
-		print(classementDico)
-		close_file_classement(classementDico)
-		get_tree().change_scene_to_file("res://scene/Menu/end_game_menu.tscn")
+	
+	var spriteArr = get_children()
+	if HpScript.lives != 3:
+		spriteArr[HpScript.lives].hide()
+		if HpScript.lives == 0:
+			var classementDico = open_file_classement()
+			print_debug(classementDico)
+			var playerName = state.playerUsername
+			var playerScore = state.enemy_count_score
+			var scoreSupToClass = false
+			var temp
+			for pNameScore in classementDico:
+				if pNameScore[-1] == "": 
+					break
+				if scoreSupToClass: #lower of one every other player
+					print(temp)
+					var _temp = temp
+					temp = pNameScore
+					pNameScore = _temp
+				if int(pNameScore[-1]) < playerScore && !scoreSupToClass:
+					temp = pNameScore 
+					scoreSupToClass = true
+					pNameScore[-1] = str(playerScore)
+					pNameScore[0] = playerName
+			print(classementDico)
+			close_file_classement(classementDico)
+			get_tree().change_scene_to_file("res://scene/Menu/end_game_menu.tscn")

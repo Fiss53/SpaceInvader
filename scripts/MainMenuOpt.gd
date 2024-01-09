@@ -19,7 +19,7 @@ func _on_button_pressed():
 	state.enemy_count_score = 0
 	state.enemy_number = 0
 	state.max_enemy = 10
-	get_node("/root/Hp").lives = 3
+	HpScript.lives = 3
 	get_tree().change_scene_to_file("res://scene/MainScene.tscn")
 
 

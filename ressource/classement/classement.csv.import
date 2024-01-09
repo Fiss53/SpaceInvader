@@ -6,10 +6,10 @@ uid="uid://c8sijwcxy4u1y"
 
 [deps]
 
-files=["res://ressource/classement/classement.103.translation"]
+files=["res://ressource/classement/classement.10.translation"]
 
 source_file="res://ressource/classement/classement.csv"
-dest_files=["res://ressource/classement/classement.103.translation"]
+dest_files=["res://ressource/classement/classement.10.translation"]
 
 [params]
 
