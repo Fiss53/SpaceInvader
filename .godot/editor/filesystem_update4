@@ -6,8 +6,3 @@ res://scene/HP.tscn
 res://scene/Enemy.tscn
 res://scene/menu_pseudo.tscn
 res://scene/Menu/end_game_menu.tscn
-res://scripts/lives.gd
-res://scripts/HP.gd
-res://scripts/MainMenuOpt.gd
-res://scripts/Enemy.gd
-res://ressource/classement/classement.419.translation

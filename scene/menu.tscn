@@ -20,11 +20,11 @@ offset_bottom = 706.0
 script = ExtResource("2_67no2")
 metadata/_edit_group_ = true
 
-[node name="NewGame" type="Button" parent="MainMenuOpt"]
+[node name="Play" type="Button" parent="MainMenuOpt"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_7ldnj")
 theme_override_font_sizes/font_size = 32
-text = "New Game"
+text = "Play"
 
 [node name="Settings" type="Button" parent="MainMenuOpt"]
 layout_mode = 2
@@ -44,7 +44,7 @@ theme_override_fonts/font = ExtResource("2_7ldnj")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 
-[connection signal="pressed" from="MainMenuOpt/NewGame" to="MainMenuOpt" method="_on_button_pressed"]
+[connection signal="pressed" from="MainMenuOpt/Play" to="MainMenuOpt" method="_on_button_pressed"]
 [connection signal="pressed" from="MainMenuOpt/Settings" to="MainMenuOpt" method="_on_settings_pressed"]
 [connection signal="pressed" from="MainMenuOpt/Credits" to="MainMenuOpt" method="_on_credits_pressed"]
 [connection signal="pressed" from="MainMenuOpt/Quit" to="MainMenuOpt" method="_on_quit_pressed"]
